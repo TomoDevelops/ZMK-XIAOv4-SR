@@ -26,6 +26,6 @@ include:
     shield: skreecustom_left
   - board: seeeduino_xiao_ble
     shield: skreecustom_right
-  - board: seeeduino_xiao_ble
+#  - board: seeeduino_xiao_ble
 #    shield: settings_reset
 #    cmake-args: -DCONFIG_ZMK_RGB_UNDERGLOW=n
