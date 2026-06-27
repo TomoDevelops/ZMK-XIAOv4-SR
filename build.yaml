@@ -26,5 +26,5 @@ include:
     shield: skreecustom_left
   - board: seeeduino_xiao_ble
     shield: skreecustom_right
-#  - board: seeeduino_xiao_ble
-#    shield: settings_reset 
+  - board: seeeduino_xiao_ble
+    shield: settings_reset 
