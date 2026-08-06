@@ -26,6 +26,20 @@ include:
     shield: skreecustom_left
   - board: seeeduino_xiao_ble
     shield: skreecustom_right
-#  - board: seeeduino_xiao_ble
-#    shield: settings_reset
-#    cmake-args: -DCONFIG_ZMK_RGB_UNDERGLOW=n
+
+  # Diagnostic builds. Identical to the firmware above but with a USB serial
+  # console that logs BLE events. Flash one of these only while capturing a log,
+  # then go back to the normal firmware.
+  - board: seeeduino_xiao_ble
+    shield: skreecustom_left
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    artifact-name: skreecustom_left_logging
+  - board: seeeduino_xiao_ble
+    shield: skreecustom_right
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    artifact-name: skreecustom_right_logging
+
+  # Wipes stored BLE bonds. Flash to a half, let it sit ~10s, then flash the
+  # normal firmware back. Do both halves together, never just one.
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
