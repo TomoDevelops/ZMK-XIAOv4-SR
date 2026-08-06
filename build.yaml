@@ -13,7 +13,7 @@
 #     shield: reviung41
 #   - board: nice_nano_v2
 #     shield: corne_left
-#     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+#     snippet: zmk-usb-logging
 #     artifact-name: corne_left_with_logging
 #
 ---
@@ -32,11 +32,11 @@ include:
   # then go back to the normal firmware.
   - board: seeeduino_xiao_ble
     shield: skreecustom_left
-    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    snippet: zmk-usb-logging
     artifact-name: skreecustom_left_logging
   - board: seeeduino_xiao_ble
     shield: skreecustom_right
-    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    snippet: zmk-usb-logging
     artifact-name: skreecustom_right_logging
 
   # Wipes stored BLE bonds. Flash to a half, let it sit ~10s, then flash the
