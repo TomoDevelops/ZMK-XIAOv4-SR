@@ -51,7 +51,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)		    RC(3,6) RC(3,7) RC(3,8) RC(
         compatible = "zmk,gpio-595";
         status = "okay";
         gpio-controller;
-        spi-max-frequency = <200000>;
+        spi-max-frequency = <2000000>;
         reg = <0>;
         #gpio-cells = <2>;
         ngpios = <8>;
