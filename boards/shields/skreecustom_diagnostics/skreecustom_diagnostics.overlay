@@ -1,0 +1,4 @@
+/* Configuration-only auxiliary shield for lightweight diagnostic builds. */
+
+/ {
+};

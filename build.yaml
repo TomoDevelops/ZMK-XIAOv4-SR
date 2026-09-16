@@ -27,17 +27,18 @@ include:
   - board: seeeduino_xiao_ble
     shield: skreecustom_right
 
-  # Diagnostic builds. Identical to the firmware above but with a USB serial
-  # console that logs BLE events. Flash one of these only while capturing a log,
-  # then go back to the normal firmware.
+  # Lightweight diagnostic builds. The auxiliary shield limits output to reset
+  # causes, BLE link transitions, five-second health summaries, and errors.
+  # Flash these only while continuously capturing both serial ports, then go
+  # back to the normal firmware.
   - board: seeeduino_xiao_ble
-    shield: skreecustom_left
+    shield: "skreecustom_left skreecustom_diagnostics"
     snippet: zmk-usb-logging
-    artifact-name: skreecustom_left_logging
+    artifact-name: skreecustom_left_light_logging
   - board: seeeduino_xiao_ble
-    shield: skreecustom_right
+    shield: "skreecustom_right skreecustom_diagnostics"
     snippet: zmk-usb-logging
-    artifact-name: skreecustom_right_logging
+    artifact-name: skreecustom_right_light_logging
 
   # Wipes stored BLE bonds. Flash to a half, let it sit ~10s, then flash the
   # normal firmware back. Do both halves together, never just one.

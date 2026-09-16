@@ -1,0 +1,11 @@
+menu "Skree Custom diagnostics"
+
+config SKREE_DIAGNOSTICS
+    bool "Lightweight split-keyboard diagnostics"
+    default y if SHIELD_SKREECUSTOM_DIAGNOSTICS
+    depends on BT
+    help
+      Record reset causes, BLE link transitions, sparse health summaries, and
+      aggregate key-event counters. Intended only for USB logging builds.
+
+endmenu
