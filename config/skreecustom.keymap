@@ -28,7 +28,7 @@
 &kp CAPS    &trans        &trans        &trans        &trans        &trans    &kp LEFT          &kp DOWN    &kp UP             &kp RIGHT        &kp PLUS  &trans
 &trans      &trans        &trans        &trans        &trans        &trans    &trans            &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans    &trans
             &trans        &trans        &trans        &trans                                    &trans      &trans             &trans           &trans
-                                                      &trans        &trans    &trans            &trans
+                                                      &kp F23       &trans    &trans            &trans
                                         &trans        &trans        &trans    &trans            &trans      &trans
                                                                     &trans    &kp C_PLAY_PAUSE
             >;
